@@ -3,10 +3,15 @@
 Sistem Penjualan WMC merupakan sebuah aplikasi untuk membantu TOKO WMC dalam menjual Produk yang mereka jual. Sistem ini dibuat menggunakan PHP Framework [Laravel](https://laravel.com/).
 
 ## Installation Instructions
+- **Run NPM**
+```
+npm install && npm run dev
+```
+
 - **Run Composer**
 
 ``` 
-composer install 
+composer install
 ```
 
 - **Copy .env.example file and rename into .env**
