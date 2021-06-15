@@ -11,7 +11,7 @@ npm install && npm run dev
 - **Run Composer**
 
 ``` 
-composer install awsdw
+composer install
 ```
 
 - **Copy .env.example file and rename into .env**
