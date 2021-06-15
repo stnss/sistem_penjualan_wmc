@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Http\Requests\BarangRequest;
 use App\Models\Barang;
 use Illuminate\Database\QueryException;
-use Illuminate\Http\Request;
 
 class BarangController extends Controller
 {
@@ -13,15 +12,15 @@ class BarangController extends Controller
     {
         abort_if(!auth()->user()->hasPermissionTo('view-barang'), 403, 'You are not allowed to view');
 
-        return view('pages.admin.barangs.index');
+        $barangs = Barang::all();
+        return view('pages.admin.barangs.index', compact('barangs'));
     }
 
     public function create()
     {
         abort_if(!auth()->user()->hasPermissionTo('create-barang'), 403, 'You are not allowed to create');
 
-        $barangs = Barang::all();
-        return view('pages.admin.barangs.create', compact('barangs'));
+        return view('pages.admin.barangs.create');
     }
 
     public function store(BarangRequest $request)
