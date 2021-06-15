@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b2df331698add459199b242cff55b46",
+    "content-hash": "8e8ffe53370cea0e8e8d3c075edb68d2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1775,16 +1775,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v2.4.4",
+            "version": "v2.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "33101c83b75728651b9e668a4559f97def7c9138"
+                "reference": "a4ffb135693e7982e5b982ca203f5dc7a7ae1126"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/33101c83b75728651b9e668a4559f97def7c9138",
-                "reference": "33101c83b75728651b9e668a4559f97def7c9138",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/a4ffb135693e7982e5b982ca203f5dc7a7ae1126",
+                "reference": "a4ffb135693e7982e5b982ca203f5dc7a7ae1126",
                 "shasum": ""
             },
             "require": {
@@ -1835,7 +1835,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v2.4.4"
+                "source": "https://github.com/livewire/livewire/tree/v2.5.1"
             },
             "funding": [
                 {
@@ -1843,7 +1843,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-04-28T15:31:15+00:00"
+            "time": "2021-06-15T13:24:48+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -2996,6 +2996,48 @@
                 }
             ],
             "time": "2020-08-18T17:17:46+00:00"
+        },
+        {
+            "name": "select2/select2",
+            "version": "4.0.13",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/select2/select2.git",
+                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/select2/select2/zipball/45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
+                "reference": "45f2b83ceed5231afa7b3d5b12b58ad335edd82e",
+                "shasum": ""
+            },
+            "type": "component",
+            "extra": {
+                "component": {
+                    "scripts": [
+                        "dist/js/select2.js"
+                    ],
+                    "styles": [
+                        "dist/css/select2.css"
+                    ],
+                    "files": [
+                        "dist/js/select2.js",
+                        "dist/js/i18n/*.js",
+                        "dist/css/select2.css"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Select2 is a jQuery based replacement for select boxes.",
+            "homepage": "https://select2.org/",
+            "support": {
+                "issues": "https://github.com/select2/select2/issues",
+                "source": "https://github.com/select2/select2/tree/4.0.13"
+            },
+            "time": "2020-01-28T05:01:22+00:00"
         },
         {
             "name": "spatie/laravel-permission",

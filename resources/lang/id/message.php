@@ -10,5 +10,6 @@ return [
         'store' => 'Gagal memembuat data :type!',
         'update' => 'Gagal mengubah data :type.',
         'delete' => 'Gagal menghapus data :type.'
-    ]
+    ],
+    'not_found' => 'Data :type tidak ditemukan!',
 ];

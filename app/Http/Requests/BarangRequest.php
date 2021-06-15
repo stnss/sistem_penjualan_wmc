@@ -8,7 +8,7 @@ class BarangRequest extends FormRequest
 {
     public function authorize()
     {
-        return auth()->user()->hasAnyPermission(['create-barang', 'update-barang']);
+        return auth()->user()->can('create-barang') || auth()->user()->can('update-barang');
     }
     
     public function rules()

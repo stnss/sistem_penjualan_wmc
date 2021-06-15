@@ -13,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::group(['middleware' => ['auth']], function () {
+    Route::get('/', function() {
+        return view('pages.admin.dashboard');
+    })->name('dashboard');
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('barangs', BarangController::class);
     });
