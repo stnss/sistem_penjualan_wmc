@@ -10,7 +10,11 @@ class BarangController extends Controller
 {
     public function index()
     {
-        abort_if(!auth()->user()->hasPermissionTo('view-barang'), 403, 'You are not allowed to view');
+        abort_if(
+            !auth()->user()->hasPermissionTo('view-barang'), 
+            403, 
+            'You are not allowed to view'
+        );
 
         $barangs = Barang::all();
         return view('pages.admin.barangs.index', compact('barangs'));
@@ -18,7 +22,11 @@ class BarangController extends Controller
 
     public function create()
     {
-        abort_if(!auth()->user()->hasPermissionTo('create-barang'), 403, 'You are not allowed to create');
+        abort_if(
+            !auth()->user()->hasPermissionTo('create-barang'), 
+            403, 
+            'You are not allowed to create'
+        );
 
         return view('pages.admin.barangs.create');
     }
@@ -27,16 +35,22 @@ class BarangController extends Controller
     {
         try {
             Barang::create($request->validated());
-        } catch(QueryException $e) {
-            return redirect()->route('barangs.index')->with('message', __('message.failed.store', ['type' => 'Barang']));
+        } catch (QueryException $e) {
+            return redirect()->route('barangs.index')
+                ->with('message', __('message.failed.store', ['type' => 'Barang']));
         }
 
-        return redirect()->route('barangs.index')->with('message', __('message.success.store', ['type' => 'Barang']));
+        return redirect()->route('barangs.index')
+            ->with('message', __('message.success.store', ['type' => 'Barang']));
     }
 
     public function edit(Barang $barang)
     {
-        abort_if(!auth()->user()->hasPermissionTo('update-barang'), 403, 'You are not allowed to edit');
+        abort_if(
+            !auth()->user()->hasPermissionTo('update-barang'), 
+            403, 
+            'You are not allowed to edit'
+        );
 
         return view('pages.admin.barangs.edit', compact('barang'));
     }
@@ -45,23 +59,31 @@ class BarangController extends Controller
     {
         try {
             $barang->update($request->validated());
-        } catch(QueryException $e) {
-            return redirect()->route('barangs.index')->with('message', __('message.failed.update', ['type' => 'Barang']));
+        } catch (QueryException $e) {
+            return redirect()->route('barangs.index')
+                ->with('message', __('message.failed.update', ['type' => 'Barang']));
         }
 
-        return redirect()->route('barangs.index')->with('message', __('message.success.update', ['type' => 'Barang']));
+        return redirect()->route('barangs.index')
+            ->with('message', __('message.success.update', ['type' => 'Barang']));
     }
 
     public function destroy(Barang $barang)
     {
-        abort_if(!auth()->user()->hasPermissionTo('delete-barang'), 403, 'You are not allowed to delete');
-        
+        abort_if(
+            !auth()->user()->hasPermissionTo('delete-barang'), 
+            403, 
+            'You are not allowed to delete'
+        );
+
         try {
             $barang->delete();
-        } catch(QueryException $e) {
-            return redirect()->route('barangs.index')->with('message', __('message.failed.delete', ['type' => 'Barang']));
+        } catch (QueryException $e) {
+            return redirect()->route('barangs.index')
+                ->with('message', __('message.failed.delete', ['type' => 'Barang']));
         }
 
-        return redirect()->route('barangs.index')->with('message', __('message.success.delete', ['type' => 'Barang']));
+        return redirect()->route('barangs.index')
+            ->with('message', __('message.success.delete', ['type' => 'Barang']));
     }
 }
