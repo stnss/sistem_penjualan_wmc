@@ -1,3 +1,3 @@
-@include('layouts.template.header')
+@include('layouts.templates.header')
 
 @yield('content')
