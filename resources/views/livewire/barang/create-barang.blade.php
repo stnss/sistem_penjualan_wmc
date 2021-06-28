@@ -32,11 +32,13 @@
                                 <h4 class="card-title">{{ __('Detail Barang') }}</h4>
                             </div>
                             <div class="card-body">
+                                <input type="text" name="name" class="form-control" />
                                 <table class="table">
                                     <thead>
                                         <tr>
                                             <th width="30%">Satuan</th>
-                                            <th width="50%">Harga</th>
+                                            <th width="13%">Stok</th>
+                                            <th width="30%">Harga</th>
                                             <th></th>
                                         </tr>
                                     </thead>
@@ -54,8 +56,15 @@
                                                 </td>
                                                 <td>
                                                     <div class="form-group">
-                                                        <input type="number" name="harga[{{ $index }}]" class="form-control form-control" 
-                                                            placeholder="Harga Barang" 
+                                                        <input type="number" name="stok[{{$index }}]" class="form-control form-control"
+                                                            placeholder="Stok Barang"
+                                                            wire:model="barangDetails.{{ $index }}.stok">
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="form-group">
+                                                        <input type="number" name="harga[{{ $index }}]" class="form-control form-control form-control"
+                                                            placeholder="Harga Barang"
                                                             value="{{ $detail['harga'] }}"
                                                             wire:model="barangDetails.{{ $index }}.harga">
                                                     </div>

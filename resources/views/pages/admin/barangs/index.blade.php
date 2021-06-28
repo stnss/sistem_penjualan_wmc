@@ -41,7 +41,8 @@
                                         <th>No.</th>
                                         <th>Nama Barang</th>
                                         <th>Stok</th>
-                                        <th>SKU</th>
+                                        <th>Sku</th>
+                                        <th>Harga</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
@@ -88,7 +89,8 @@
                                         <th>No.</th>
                                         <th>Nama Barang</th>
                                         <th>Stok</th>
-                                        <th>SKU</th>
+                                        <th>Sku</th>
+                                        <th>Harga</th>
                                         <th>Action</th>
                                     </tr>
                                 </tfoot>

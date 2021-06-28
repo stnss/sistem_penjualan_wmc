@@ -20,7 +20,7 @@ class OrderController extends Controller
             'You are not allowed to view'
         );
 
-        $barangs = Order::all();
+        $orders = Order::all();
         return view('pages.admin.orders.index', compact('orders'));
     }
 
