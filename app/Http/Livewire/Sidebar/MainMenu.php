@@ -22,7 +22,7 @@ class MainMenu extends Component
                         'url' => ''
                     ]
                 ]
-            ],    
+            ],
             [
                 'name' => 'Master',
                 'type' => 'section',
@@ -53,9 +53,27 @@ class MainMenu extends Component
                     ]
                 ]
             ],
+            [
+                'name' => 'Orderan',
+                'type' => 'dropdown',
+                'url' => 'orders',
+                'icon' => 'la flaticon-box-1',
+                'subItem' => [
+                    [
+                        'name' => __('menu.list', ['type' => 'Order']),
+                        'url' => route('admin.orders.index'),
+                        'icon' => 'la flaticon-list',
+                    ],
+                    [
+                        'name' => __('menu.tambah', ['type' => 'Order']),
+                        'url' => route('admin.orders.create'),
+                        'icon' => 'la flaticon-add'
+                    ]
+                ]
+            ],
         ];
     }
-    
+
     public function render()
     {
         return view('livewire.sidebar.main-menu');

@@ -15,13 +15,12 @@ class CreateDetailBarangsTable extends Migration
     {
         Schema::create('detail_barangs', function (Blueprint $table) {
             $table->string('barang_id')->constrained();
+            $table->string('sku')->unique();
             $table->string('satuan');
             $table->integer('stock');
             $table->integer('harga');
             $table->timestamps();
             $table->softDeletes();
-
-            $table->unique(['barang_id', 'satuan']);
         });
     }
 

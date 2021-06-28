@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BarangController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,5 +20,6 @@ Route::group(['middleware' => ['auth']], function () {
     })->name('dashboard');
     Route::group(['prefix' => 'admin', 'as' => 'admin.'], function () {
         Route::resource('barangs', BarangController::class);
+        Route::resource('orders',OrderController::class);
     });
 });
